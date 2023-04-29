@@ -86,10 +86,6 @@ const objLat = (obj) => {
 
 const cvFormatter = (arr) => {
     // write your code here
-    if(yearsOfExperience > 1)
-    {
-        document.write('')
-    }
 };
 // -------------------------------------------------------------------------------------------------------
 
