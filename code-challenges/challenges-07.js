@@ -7,7 +7,7 @@
 //  Write a function that takes an object and returns the formatted text based on the provided object as the example:
 // 
 // Input:
-//  let obj = {
+//  let obj = { 
 //      firstName: 'Ellie',
 //      lastName: 'jon',
 //      age: 67,
@@ -21,8 +21,36 @@
 //  2- The first letters of the firstName and lastName should be capital letter
 
 const objLat = (obj) => {
-    // write your code here
-};
+    return (
+      "my name is " +
+      obj.firstName.charAt(0).toUpperCase() +
+      obj.firstName.slice(1) +
+      " " +
+      obj.lastName.charAt(0).toUpperCase() +
+      obj.lastName.slice(1) +
+      " I am " +
+      obj.age +
+      " YO, and I love " +
+      obj.hobby +
+      "."
+    );
+  };
+// const objLat = (obj) => {
+//     // write your code here
+//     obj = obj.map( function( item ){
+//         for(var key in item){
+//             var upper = key.toUpperCase();
+//             // check if it already wasn't uppercase
+//             if( upper !== key ){ 
+//                 item[ upper ] = item[key];
+//                 delete item[key];
+//             }
+//         }
+//         return item;
+//     });
+// console.log("my name is " + obj.firstName + " " + obj.lastName + "I am " + obj.age + " YO, " + "and I love " + obj.hobby);
+
+// };
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -85,8 +113,53 @@ const objLat = (obj) => {
 //  2- If one of the names is null don`t add it to the full name
 
 const cvFormatter = (arr) => {
-    // write your code here
-};
+    var info = [];
+  
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i].yearsOfExperience > 1) {
+        if (arr[i].lastName === null) {
+          info.push({
+            fullName: arr[i].firstName,
+            tech: arr[i].tech,
+          });
+        } else {
+          info.push({
+            fullName: arr[i].firstName + " " + arr[i].lastName,
+            tech: arr[i].tech,
+          });
+        }
+      }
+    }
+    return info;
+  };
+// const cvFormatter = (arr) => {
+//         // write your code here
+
+//     let newArr = [];
+//     let cv;
+//     for (let i = 0; i < arr.length; i++) {        
+    
+//     if (arr[i].yearsOfExperience > 1) {
+        
+//        cv ={
+//         fullName :  arr[i].firstName +" "+ arr[i].lastName ,
+//         tech:arr[i].tech
+//        }
+//         newArr.push(cv);
+    
+//     }
+//     else{
+//         if (arr[i].yearsOfExperience > 1 || arr[i].lastName ) {
+//             cv ={
+//                 fullName :  arr[i].firstName +" "+ arr[i].lastName ,
+//                 tech:arr[i].tech
+//                }
+//                newArr.push(cv);
+//     }
+//     }
+// }
+// return newArr
+// };
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -113,7 +186,7 @@ const cvFormatter = (arr) => {
 const applicationsStatics = (arr) => {
     // write your code here
 };
-// -------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------n---------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
 //  Challenge 4:
